@@ -1,3 +1,58 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract technology background",
+      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
+      "imageHint": "abstract technology"
+    },
+    {
+      "id": "flux-energy-project",
+      "description": "Image for Flux Energy Systems project",
+      "imageUrl": "https://picsum.photos/seed/flux/600/400",
+      "imageHint": "energy grid"
+    },
+    {
+      "id": "isaacsim-robotics-project",
+      "description": "Image for IsaacSim Robotics project",
+      "imageUrl": "https://picsum.photos/seed/isaac/600/400",
+      "imageHint": "robot arm"
+    },
+    {
+      "id": "future-project",
+      "description": "Placeholder for a future project",
+      "imageUrl": "https://picsum.photos/seed/future/600/400",
+      "imageHint": "ai brain"
+    },
+    {
+      "id": "harris-frangou-ceo",
+      "description": "Portrait of Harris Frangou, CEO",
+      "imageUrl": "https://picsum.photos/seed/harris/400/400",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "anuarg-rudra-cto",
+      "description": "Portrait of Anuarg Rudra, CTO",
+      "imageUrl": "https://picsum.photos/seed/anuarg/400/400",
+      "imageHint": "professional man portrait"
+    },
+    {
+      "id": "flux-energy-hero",
+      "description": "Hero image for Flux Energy Systems project page",
+      "imageUrl": "https://picsum.photos/seed/fluxhero/1200/600",
+      "imageHint": "power lines sunset"
+    },
+    {
+      "id": "isaacsim-robotics-hero",
+      "description": "Hero image for IsaacSim Robotics project page",
+      "imageUrl": "https://picsum.photos/seed/isaachero/1200/600",
+      "imageHint": "robotic factory"
+    },
+    {
+      "id": "about-us-image",
+      "description": "Image for the about us section",
+      "imageUrl": "https://picsum.photos/seed/about/600/400",
+      "imageHint": "team collaboration"
+    }
+  ]
 }

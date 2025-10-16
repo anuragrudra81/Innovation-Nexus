@@ -1,0 +1,97 @@
+"use client";
+
+import * as React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+
+import { Icons } from "@/components/icons";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/projects", label: "Projects" },
+  { href: "/team", label: "Team" },
+  { href: "/contact", label: "Contact" },
+];
+
+export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const pathname = usePathname();
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm">
+      <div className="container flex h-16 items-center">
+        <Link href="/" className="mr-6 flex items-center space-x-2">
+          <Icons.Logo className="h-6 w-6 text-primary" />
+          <span className="hidden font-bold sm:inline-block font-headline">
+            Innovation Nexus
+          </span>
+        </Link>
+        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "transition-colors hover:text-primary",
+                pathname === link.href ? "text-primary" : "text-foreground/60"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        <div className="flex flex-1 items-center justify-end space-x-2">
+          <Button asChild className="hidden sm:inline-flex">
+            <Link href="/contact">Inquire Now</Link>
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X /> : <Menu />}
+          </Button>
+        </div>
+      </div>
+      {isMenuOpen && (
+        <div className="md:hidden border-t">
+          <nav className="flex flex-col items-start space-y-1 p-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "w-full rounded-md p-2 text-left transition-colors hover:bg-accent hover:text-accent-foreground",
+                  pathname === link.href ? "bg-accent text-accent-foreground" : ""
+                )}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+             <Button asChild className="w-full mt-2">
+              <Link href="/contact">Inquire Now</Link>
+            </Button>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}
