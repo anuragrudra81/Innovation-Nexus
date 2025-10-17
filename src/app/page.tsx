@@ -90,24 +90,24 @@ export default function Home() {
         <div className="container px-4">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div className="space-y-4">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold text-accent">Our Vision</h2>
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Our Vision</h2>
                     <p className="text-lg text-foreground/80">
                         At Innovation Nexus, our mission is to drive progress by pioneering cutting-edge solutions in artificial intelligence and energy systems. We operate as a dynamic R&D studio, transforming bold ideas into tangible, high-impact prototypes.
                     </p>
                     <p className="text-foreground/70">
                         Our innovation process is rooted in deep simulation, rigorous testing, and strategic patenting, ensuring that our creations are not only groundbreaking but also robust and market-ready. We thrive on collaboration and are always seeking partners to join us in shaping the future.
                     </p>
-                    <Button variant="link" asChild className="p-0 h-auto text-base">
+                    <Button variant="link" asChild className="p-0 h-auto text-base text-primary">
                         <Link href="/team">Meet our team <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
                 </div>
-                <div>
+                <div className="flex justify-center">
                   <Image 
                       src={aboutImage.imageUrl}
                       alt={aboutImage.description}
                       width={600}
                       height={400}
-                      className="rounded-lg shadow-lg"
+                      className="rounded-lg shadow-xl"
                       data-ai-hint={aboutImage.imageHint}
                   />
                 </div>
@@ -117,7 +117,7 @@ export default function Home() {
       
       {/* Projects Showcase */}
       <section id="projects" className="py-16 md:py-24 bg-secondary">
-        <div className="container text-center">
+        <div className="container px-4 text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Core Projects</h2>
           <p className="mt-2 max-w-2xl mx-auto text-foreground/70">
             From sustainable energy to autonomous robotics, our work is diverse and forward-thinking.
@@ -138,7 +138,7 @@ export default function Home() {
                 <CardContent className="p-6 flex-grow flex flex-col">
                   <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
                   <CardDescription className="mt-2 flex-grow">{project.description}</CardDescription>
-                  <Button variant="outline" className="mt-4 self-start" asChild>
+                  <Button variant="outline" className="mt-6 self-start" asChild>
                     <Link href={project.href}>
                       Learn More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -152,12 +152,12 @@ export default function Home() {
 
       {/* Team Preview */}
       <section id="team" className="py-16 md:py-24">
-        <div className="container text-center">
+        <div className="container px-4 text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Led by Visionaries</h2>
             <p className="mt-2 max-w-2xl mx-auto text-foreground/70">
                 Our leadership brings together decades of experience in technology, innovation, and business.
             </p>
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-2xl mx-auto">
                 {teamMembers.map(member => (
                     <div key={member.name} className="flex flex-col items-center gap-4">
                         <Image
@@ -165,17 +165,17 @@ export default function Home() {
                             alt={member.image.description}
                             width={160}
                             height={160}
-                            className="rounded-full object-cover ring-4 ring-accent/20"
+                            className="rounded-full object-cover ring-4 ring-primary/20"
                             data-ai-hint={member.image.imageHint}
                         />
                         <div>
                             <h3 className="font-headline text-xl font-semibold">{member.name}</h3>
-                            <p className="text-accent">{member.role}</p>
+                            <p className="text-primary">{member.role}</p>
                         </div>
                     </div>
                 ))}
             </div>
-            <Button className="mt-12" asChild size="lg">
+            <Button className="mt-16" asChild size="lg">
               <Link href="/team">Meet The Full Team</Link>
             </Button>
         </div>
