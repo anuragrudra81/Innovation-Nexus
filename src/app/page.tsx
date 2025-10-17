@@ -67,7 +67,7 @@ export default function Home() {
             priority
             data-ai-hint={heroImage.imageHint}
         />
-        <div className="container relative z-20 px-4">
+        <div className="container mx-auto max-w-5xl relative z-20 px-4">
           <h1 className="font-headline text-4xl font-bold md:text-6xl lg:text-7xl drop-shadow-md">
             Innovating Through AI & Simulation
           </h1>
@@ -87,7 +87,7 @@ export default function Home() {
 
       {/* About Us Section */}
       <section id="about" className="py-16 md:py-24 bg-background">
-        <div className="container px-4">
+        <div className="container mx-auto max-w-5xl px-4">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div className="space-y-4">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Our Vision</h2>
@@ -117,7 +117,7 @@ export default function Home() {
       
       {/* Projects Showcase */}
       <section id="projects" className="py-16 md:py-24 bg-secondary">
-        <div className="container px-4 text-center">
+        <div className="container mx-auto max-w-5xl px-4 text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Core Projects</h2>
           <p className="mt-2 max-w-2xl mx-auto text-foreground/70">
             From sustainable energy to autonomous robotics, our work is diverse and forward-thinking.
@@ -152,7 +152,7 @@ export default function Home() {
 
       {/* Team Preview */}
       <section id="team" className="py-16 md:py-24">
-        <div className="container px-4 text-center">
+        <div className="container mx-auto max-w-5xl px-4 text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Led by Visionaries</h2>
             <p className="mt-2 max-w-2xl mx-auto text-foreground/70">
                 Our leadership brings together decades of experience in technology, innovation, and business.
