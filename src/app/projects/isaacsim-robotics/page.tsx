@@ -26,7 +26,7 @@ export default function IsaacSimRoboticsPage() {
                     priority
                     data-ai-hint={projectHeroImage.imageHint}
                 />
-                <div className="container relative z-20 pb-12">
+                <div className="container relative z-20 pb-12 px-4">
                     <h1 className="font-headline text-4xl md:text-6xl font-bold drop-shadow-lg">
                         IsaacSim Robotics
                     </h1>
@@ -36,7 +36,7 @@ export default function IsaacSimRoboticsPage() {
                 </div>
             </section>
             
-            <div className="container py-16 md:py-24">
+            <div className="container py-16 md:py-24 px-4">
                 <div className="grid lg:grid-cols-3 gap-12">
                     <div className="lg:col-span-2 space-y-8">
                         <section>

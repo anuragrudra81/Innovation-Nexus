@@ -40,7 +40,7 @@ export default function ContactPage() {
     }
 
     return (
-        <div className="container py-16 md:py-24">
+        <div className="container py-16 md:py-24 px-4">
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <div className="space-y-6">
                     <h1 className="font-headline text-4xl md:text-5xl font-bold">Let's Connect</h1>

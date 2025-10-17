@@ -44,7 +44,7 @@ const projects: Project[] = [
 
 export default function ProjectsPage() {
     return (
-        <div className="container py-16 md:py-24">
+        <div className="container py-16 md:py-24 px-4">
             <div className="text-center">
                 <h1 className="font-headline text-4xl md:text-5xl font-bold">Our Innovations</h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
