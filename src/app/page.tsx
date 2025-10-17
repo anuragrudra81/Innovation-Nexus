@@ -90,7 +90,7 @@ export default function Home() {
         <div className="container">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div className="space-y-4">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Our Vision</h2>
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold text-accent">Our Vision</h2>
                     <p className="text-lg text-foreground/80">
                         At Innovation Nexus, our mission is to drive progress by pioneering cutting-edge solutions in artificial intelligence and energy systems. We operate as a dynamic R&D studio, transforming bold ideas into tangible, high-impact prototypes.
                     </p>
@@ -116,7 +116,7 @@ export default function Home() {
       </section>
       
       {/* Projects Showcase */}
-      <section id="projects" className="py-16 md:py-24 bg-secondary/50">
+      <section id="projects" className="py-16 md:py-24 bg-secondary">
         <div className="container text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Core Projects</h2>
           <p className="mt-2 max-w-2xl mx-auto text-foreground/70">
@@ -124,7 +124,7 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-left">
             {projectsData.map((project) => (
-              <Card key={project.id} className="flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <Card key={project.id} className="flex flex-col overflow-hidden bg-card border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <CardHeader className="p-0">
                   <Image
                     src={project.image.imageUrl}
@@ -165,12 +165,12 @@ export default function Home() {
                             alt={member.image.description}
                             width={160}
                             height={160}
-                            className="rounded-full object-cover ring-4 ring-primary/20"
+                            className="rounded-full object-cover ring-4 ring-accent/20"
                             data-ai-hint={member.image.imageHint}
                         />
                         <div>
                             <h3 className="font-headline text-xl font-semibold">{member.name}</h3>
-                            <p className="text-primary">{member.role}</p>
+                            <p className="text-accent">{member.role}</p>
                         </div>
                     </div>
                 ))}
