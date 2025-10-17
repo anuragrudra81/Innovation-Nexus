@@ -124,7 +124,7 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-left">
             {projectsData.map((project) => (
-              <Card key={project.id} className="flex flex-col overflow-hidden bg-card border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <Card key={project.id} className="flex flex-col overflow-hidden bg-card border shadow-sm hover:shadow-xl hover:-translate-y-2 transition-transform duration-300">
                 <CardHeader className="p-0">
                   <Image
                     src={project.image.imageUrl}
@@ -159,13 +159,13 @@ export default function Home() {
             </p>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-2xl mx-auto">
                 {teamMembers.map(member => (
-                    <div key={member.name} className="flex flex-col items-center gap-4">
+                    <div key={member.name} className="flex flex-col items-center gap-4 group">
                         <Image
                             src={member.image.imageUrl}
                             alt={member.image.description}
                             width={160}
                             height={160}
-                            className="rounded-full object-cover ring-4 ring-primary/20"
+                            className="rounded-full object-cover ring-4 ring-primary/20 group-hover:scale-105 transition-transform duration-300"
                             data-ai-hint={member.image.imageHint}
                         />
                         <div>

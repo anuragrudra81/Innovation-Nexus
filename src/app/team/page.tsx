@@ -35,7 +35,7 @@ export default function TeamPage() {
             </div>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
                 {teamMembers.map(member => (
-                    <Card key={member.name} className="text-center border-2 hover:border-primary transition-colors duration-300 transform hover:-translate-y-1">
+                    <Card key={member.name} className="text-center border-2 hover:border-primary transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
                         <CardHeader className="items-center pt-8">
                             <Image
                                 src={member.image.imageUrl}
