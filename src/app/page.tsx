@@ -87,7 +87,7 @@ export default function Home() {
 
       {/* About Us Section */}
       <section id="about" className="py-16 md:py-24 bg-background">
-        <div className="container">
+        <div className="container px-4">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div className="space-y-4">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold text-accent">Our Vision</h2>
