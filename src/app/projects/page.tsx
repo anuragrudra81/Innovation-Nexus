@@ -53,7 +53,7 @@ export default function ProjectsPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             {projects.map((project) => (
-              <Card key={project.id} className="flex flex-col md:flex-row overflow-hidden hover:shadow-xl transition-shadow,transform duration-300 hover:-translate-y-1">
+              <Card key={project.id} className="flex flex-col md:flex-row overflow-hidden hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-primary/20">
                 <div className="md:w-2/5 relative min-h-[200px] md:min-h-full">
                   <Image
                     src={project.image.imageUrl}
@@ -69,7 +69,7 @@ export default function ProjectsPage() {
                     <CardDescription>{project.longDescription}</CardDescription>
                   </CardHeader>
                   <CardContent className="flex-grow flex items-end">
-                    <Button variant="default" asChild>
+                    <Button variant="default" asChild className="hover:-translate-y-0.5 transition-transform duration-200">
                       <Link href={project.href}>
                         View Project Details <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>

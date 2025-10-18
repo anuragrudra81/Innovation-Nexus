@@ -8,7 +8,7 @@ import { Menu, X, Moon, Sun } from "lucide-react";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { useTheme } from "@/hooks/use-theme";
+import { useTheme } from "next-themes";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -49,8 +49,8 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "transition-colors hover:text-primary",
-                pathname === link.href ? "text-primary" : "text-foreground/60"
+                "relative transition-colors hover:text-primary after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-full after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100",
+                pathname === link.href ? "text-primary after:scale-x-100" : "text-foreground/60"
               )}
             >
               {link.label}
@@ -62,12 +62,13 @@ export function Header() {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              className="hover:bg-accent/50 transition-colors"
             >
               <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
           </Button>
-          <Button asChild className="hidden sm:inline-flex">
+          <Button asChild className="hidden sm:inline-flex hover:-translate-y-0.5 transition-transform duration-300">
             <Link href="/contact">Inquire Now</Link>
           </Button>
           <Button

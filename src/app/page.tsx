@@ -75,10 +75,10 @@ export default function Home() {
             Innovation Nexus is the R&D studio building the next generation of intelligent systems and sustainable technologies.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="hover:-translate-y-1 transition-transform duration-300">
               <Link href="/projects">Explore Projects</Link>
             </Button>
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" variant="secondary" asChild className="hover:-translate-y-1 transition-transform duration-300">
               <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -124,7 +124,7 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-left">
             {projectsData.map((project) => (
-              <Card key={project.id} className="flex flex-col overflow-hidden bg-card border shadow-sm hover:shadow-xl hover:-translate-y-2 transition-transform duration-300">
+              <Card key={project.id} className="flex flex-col overflow-hidden bg-card border shadow-sm hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 ease-in-out hover:shadow-primary/20">
                 <CardHeader className="p-0">
                   <Image
                     src={project.image.imageUrl}
@@ -138,7 +138,7 @@ export default function Home() {
                 <CardContent className="p-6 flex-grow flex flex-col">
                   <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
                   <CardDescription className="mt-2 flex-grow">{project.description}</CardDescription>
-                  <Button variant="outline" className="mt-6 self-start" asChild>
+                  <Button variant="outline" className="mt-6 self-start hover:-translate-y-0.5 transition-transform duration-200" asChild>
                     <Link href={project.href}>
                       Learn More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -165,7 +165,7 @@ export default function Home() {
                             alt={member.image.description}
                             width={160}
                             height={160}
-                            className="rounded-full object-cover ring-4 ring-primary/20 group-hover:scale-105 transition-transform duration-300"
+                            className="rounded-full object-cover ring-4 ring-primary/20 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-300 ease-in-out"
                             data-ai-hint={member.image.imageHint}
                         />
                         <div>
@@ -175,7 +175,7 @@ export default function Home() {
                     </div>
                 ))}
             </div>
-            <Button className="mt-16" asChild size="lg">
+            <Button className="mt-16 hover:-translate-y-1 transition-transform duration-300" asChild size="lg">
               <Link href="/team">Meet The Full Team</Link>
             </Button>
         </div>

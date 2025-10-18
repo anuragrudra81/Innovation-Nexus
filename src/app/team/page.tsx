@@ -35,14 +35,14 @@ export default function TeamPage() {
             </div>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
                 {teamMembers.map(member => (
-                    <Card key={member.name} className="text-center border-2 hover:border-primary transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                    <Card key={member.name} className="text-center border-2 hover:border-primary transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
                         <CardHeader className="items-center pt-8">
                             <Image
                                 src={member.image.imageUrl}
                                 alt={member.image.description}
                                 width={128}
                                 height={128}
-                                className="rounded-full object-cover ring-4 ring-primary/10"
+                                className="rounded-full object-cover ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all duration-300"
                                 data-ai-hint={member.image.imageHint}
                             />
                         </CardHeader>
