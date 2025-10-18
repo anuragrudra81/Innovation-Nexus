@@ -67,7 +67,7 @@ export default function Home() {
             priority
             data-ai-hint={heroImage.imageHint}
         />
-        <div className="container mx-auto max-w-5xl relative z-20 px-4">
+        <div className="relative z-20 px-4">
           <h1 className="font-headline text-4xl font-bold md:text-6xl lg:text-7xl drop-shadow-md">
             Innovating Through AI & Simulation
           </h1>
@@ -87,44 +87,42 @@ export default function Home() {
 
       {/* About Us Section */}
       <section id="about" className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto max-w-5xl px-4">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                <div className="space-y-4">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Our Vision</h2>
-                    <p className="text-lg text-foreground/80">
-                        At Innovation Nexus, our mission is to drive progress by pioneering cutting-edge solutions in artificial intelligence and energy systems. We operate as a dynamic R&D studio, transforming bold ideas into tangible, high-impact prototypes.
-                    </p>
-                    <p className="text-foreground/70">
-                        Our innovation process is rooted in deep simulation, rigorous testing, and strategic patenting, ensuring that our creations are not only groundbreaking but also robust and market-ready. We thrive on collaboration and are always seeking partners to join us in shaping the future.
-                    </p>
-                    <Button variant="link" asChild className="p-0 h-auto text-base text-primary">
-                        <Link href="/team">Meet our team <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                    </Button>
-                </div>
-                <div className="flex justify-center">
-                  <Image 
-                      src={aboutImage.imageUrl}
-                      alt={aboutImage.description}
-                      width={600}
-                      height={400}
-                      className="rounded-lg shadow-xl"
-                      data-ai-hint={aboutImage.imageHint}
-                  />
-                </div>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div className="space-y-4">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Our Vision</h2>
+                <p className="text-lg text-foreground/80">
+                    At Innovation Nexus, our mission is to drive progress by pioneering cutting-edge solutions in artificial intelligence and energy systems. We operate as a dynamic R&D studio, transforming bold ideas into tangible, high-impact prototypes.
+                </p>
+                <p className="text-foreground/70">
+                    Our innovation process is rooted in deep simulation, rigorous testing, and strategic patenting, ensuring that our creations are not only groundbreaking but also robust and market-ready. We thrive on collaboration and are always seeking partners to join us in shaping the future.
+                </p>
+                <Button variant="link" asChild className="p-0 h-auto text-base text-primary">
+                    <Link href="/team">Meet our team <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+            </div>
+            <div className="flex justify-center">
+              <Image 
+                  src={aboutImage.imageUrl}
+                  alt={aboutImage.description}
+                  width={600}
+                  height={400}
+                  className="rounded-lg shadow-xl"
+                  data-ai-hint={aboutImage.imageHint}
+              />
             </div>
         </div>
       </section>
       
       {/* Projects Showcase */}
       <section id="projects" className="py-16 md:py-24 bg-secondary">
-        <div className="container mx-auto max-w-5xl px-4 text-center">
+        <div className="text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Core Projects</h2>
           <p className="mt-2 max-w-2xl mx-auto text-foreground/70">
             From sustainable energy to autonomous robotics, our work is diverse and forward-thinking.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-left">
             {projectsData.map((project) => (
-              <Card key={project.id} className="flex flex-col overflow-hidden bg-card border shadow-sm hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 ease-in-out hover:shadow-primary/20">
+              <Card key={project.id} className="flex flex-col overflow-hidden bg-card border shadow-sm hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-2 transition-all duration-300 ease-in-out active:scale-[0.98] active:shadow-lg">
                 <CardHeader className="p-0">
                   <Image
                     src={project.image.imageUrl}
@@ -152,7 +150,7 @@ export default function Home() {
 
       {/* Team Preview */}
       <section id="team" className="py-16 md:py-24">
-        <div className="container mx-auto max-w-5xl px-4 text-center">
+        <div className="text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Led by Visionaries</h2>
             <p className="mt-2 max-w-2xl mx-auto text-foreground/70">
                 Our leadership brings together decades of experience in technology, innovation, and business.
@@ -165,7 +163,7 @@ export default function Home() {
                             alt={member.image.description}
                             width={160}
                             height={160}
-                            className="rounded-full object-cover ring-4 ring-primary/20 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-300 ease-in-out"
+                            className="rounded-full object-cover ring-4 ring-primary/20 group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-primary/40 transition-all duration-300 ease-in-out"
                             data-ai-hint={member.image.imageHint}
                         />
                         <div>

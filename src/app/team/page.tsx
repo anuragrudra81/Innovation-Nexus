@@ -26,7 +26,7 @@ const teamMembers: TeamMember[] = [
 
 export default function TeamPage() {
     return (
-        <div className="container mx-auto max-w-5xl py-16 md:py-24 px-4">
+        <div className="py-16 md:py-24">
             <div className="text-center">
                 <h1 className="font-headline text-4xl md:text-5xl font-bold">Our Leadership</h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
@@ -35,7 +35,7 @@ export default function TeamPage() {
             </div>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
                 {teamMembers.map(member => (
-                    <Card key={member.name} className="text-center border-2 hover:border-primary transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                    <Card key={member.name} className="text-center border-2 hover:border-primary transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 active:scale-[0.98] active:shadow-lg">
                         <CardHeader className="items-center pt-8">
                             <Image
                                 src={member.image.imageUrl}
